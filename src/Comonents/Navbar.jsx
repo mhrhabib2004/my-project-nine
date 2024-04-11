@@ -1,6 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { useContext } from "react";
+import { AuthContext } from "../Provaider/AuthProvaider";
 
 const Navbar = () => {
+       
+        const{user,  logOut}=useContext(AuthContext);
+    const handelSingout= () =>{
+        logOut()
+        .then()
+        .catch()
+
+    }
     const navLinks=<>
      <li><NavLink to={"/Home"}>Home</NavLink></li>
      <li><NavLink to={"/UpdateProfile"}>Update Profile</NavLink></li>
@@ -25,8 +36,11 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <img className="rounded-full h-7 w-7 " src="" alt="" />
-    <a className="btn">Login</a>
+    {
+        user?<button onClick={handelSingout} className="btn">Sing out</button>
+        :<Link to={"/Login"}> <button className="btn">Login</button></Link>
+    }
+   
   </div>
 </div>
     );

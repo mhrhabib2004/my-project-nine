@@ -10,6 +10,9 @@ import Router from './Comonents/Router.jsx';
 import UpdateProfile from './Comonents/UpdateProfile.jsx';
 import Home from './Comonents/Home.jsx';
 import Userprofile from './Comonents/Userprofile.jsx';
+import Login from './Comonents/Login.jsx';
+import Register from './Comonents/Register.jsx';
+import AuthProvaider from './Provaider/AuthProvaider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +33,18 @@ const router = createBrowserRouter([
         path:"/userprofile",
         element:<Userprofile></Userprofile>,
 
+      },
+      {
+        path:"/Login",
+        element:<Login></Login>,
+
+      },
+      {
+        path:"/Register",
+        element:<Register></Register>,
+
       }
+    
       
     ]
   },
@@ -38,6 +52,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+     <AuthProvaider>
      <RouterProvider router={router} />
+     </AuthProvaider>
   </React.StrictMode>,
 )
