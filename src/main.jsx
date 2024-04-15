@@ -13,6 +13,8 @@ import Userprofile from './Comonents/Userprofile.jsx';
 import Login from './Comonents/Login.jsx';
 import Register from './Comonents/Register.jsx';
 import AuthProvaider from './Provaider/AuthProvaider.jsx';
+import ErrorPage from './Comonents/ErrorPage.jsx';
+import PropertyShoing from './Comonents/PropertyShoing.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,7 +45,18 @@ const router = createBrowserRouter([
         path:"/Register",
         element:<Register></Register>,
 
+      },
+      {
+        path:"/errorPage",
+        element:<ErrorPage></ErrorPage>,
+
+      },
+      {
+        path:"/propertyShowing/:id",
+        loader:()=> fetch('/Data.json'),
+        element: <PropertyShoing></PropertyShoing>
       }
+      
     
       
     ]

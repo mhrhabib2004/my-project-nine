@@ -3,6 +3,7 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { useContext } from "react";
 import { AuthContext } from "../Provaider/AuthProvaider";
 
+
 const Navbar = () => {
        
         const{user,  logOut}=useContext(AuthContext);
@@ -16,6 +17,7 @@ const Navbar = () => {
      <li><NavLink to={"/Home"}>Home</NavLink></li>
      <li><NavLink to={"/UpdateProfile"}>Update Profile</NavLink></li>
      <li><NavLink to={"/userprofile"}>user profile</NavLink></li>
+     <li><NavLink to={"/errorPage"}>Error Page</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -28,17 +30,21 @@ const Navbar = () => {
        {navLinks}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl"> Website name</a>
+    <a className="btn btn-ghost text-xl"> DreamHome Realty</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       {navLinks}
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end gap-3">
+  
     {
-        user?<button onClick={handelSingout} className="btn">Sing out</button>
-        :<Link to={"/Login"}> <button className="btn">Login</button></Link>
+        user?.email ? <div className="flex gap-2 items-center"><div className="w-10 rounded-full">
+        <img className="rounded-full" alt="profile" src={user?.ImageUrl} />
+              </div> <button onClick={handelSingout} className="btn btn-warning">Sing out</button></div>
+        :
+        <Link to={"/Login"}> <button className="btn btn-outline">Login</button></Link>
     }
    
   </div>

@@ -1,11 +1,18 @@
+import Estates from "./Estates";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Slider from "./Slider";
+
 
 
 const Home = () => {
+    
     return (
         <div>
-            <Navbar></Navbar>
-            <h2 className="2xl">this is home</h2>
+            
+            <Slider></Slider>
+            <Estates></Estates>
+            
         </div>
     );
 };
