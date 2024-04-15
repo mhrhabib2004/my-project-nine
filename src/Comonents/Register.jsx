@@ -43,6 +43,7 @@ const Register = () => {
         .then(result=>{
             console.log(result.user)
             alert('Your Registration successfull');
+            return;
         
        
             

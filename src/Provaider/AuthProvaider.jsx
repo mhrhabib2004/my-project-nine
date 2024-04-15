@@ -37,6 +37,7 @@ const AuthProvaider = ({children}) => {
         logOut,
         provider,
         gitProvider
+        
 
 
     }

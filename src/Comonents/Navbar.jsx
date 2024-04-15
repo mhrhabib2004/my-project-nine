@@ -41,7 +41,7 @@ const Navbar = () => {
   
     {
         user?.email ? <div className="flex gap-2 items-center"><div className="w-10 rounded-full">
-        <img className="rounded-full" alt="profile" src={user?.ImageUrl} />
+        <img className="rounded-full" alt="profile" src={user?.photoURL} />
               </div> <button onClick={handelSingout} className="btn btn-warning">Sing out</button></div>
         :
         <Link to={"/Login"}> <button className="btn btn-outline">Login</button></Link>
