@@ -15,8 +15,8 @@ const Userprofile = () => {
                 <img src={user?.photoURL} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">Name :{user?.displayName}</h2>
-                <p>Email :{user?.email}</p>
+                <h2 className="card-title">Name : {user?.displayName}</h2>
+                <p>Email : {user?.email}</p>
                 <div className="card-actions">
                     <Link to={"/Home"}><button className="btn btn-primary">Back to Home</button></Link>
                 </div>

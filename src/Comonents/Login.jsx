@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
+
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provaider/AuthProvaider";
 import { FaGoogle,FaGithub, FaEyeSlash } from "react-icons/fa";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithPopup} from "firebase/auth";
 import auth from "../firebase.config";
 import { FaEye } from "react-icons/fa6";
+
 
 const Login = () => {
     const { signIn,provider,gitProvider } = useContext(AuthContext);
@@ -22,6 +23,8 @@ const Login = () => {
             .catch()
     }
 
+
+   
     const handelGooglelogin=()=>{
         signInWithPopup(auth,provider)
         .then()

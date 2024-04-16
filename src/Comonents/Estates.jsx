@@ -1,5 +1,5 @@
 
-import { key } from "localforage";
+
 import { useEffect, useState } from "react";
 import Datacard from "./Datacard";
 

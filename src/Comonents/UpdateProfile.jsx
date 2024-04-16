@@ -1,10 +1,17 @@
 import { useContext } from "react";
 
 import { AuthContext } from "../Provaider/AuthProvaider";
+import { updateProfile } from "firebase/auth";
+import auth from "../firebase.config";
 
 const UpdateProfile = () => {
-    const {user}=useContext(AuthContext);
+    const {user,crrentUser}=useContext(AuthContext);
     console.log(user)
+    updateProfile(auth,crrentUser,{
+        displayName: "Jane Q. User", photoURL: "https://example.com/jane-q-user/profile.jpg"
+    })
+    .then()
+    .catch()
     return (
         <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col ">
