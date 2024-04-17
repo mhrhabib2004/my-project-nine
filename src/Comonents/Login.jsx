@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,useLocation,useNavigate } from "react-router-dom";
 
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provaider/AuthProvaider";
@@ -6,11 +6,19 @@ import { FaGoogle,FaGithub, FaEyeSlash } from "react-icons/fa";
 import { signInWithPopup} from "firebase/auth";
 import auth from "../firebase.config";
 import { FaEye } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
-    const { signIn,provider,gitProvider } = useContext(AuthContext);
+    const { signIn,provider,gitProvider,loading } = useContext(AuthContext);
     const [showPassword,setshowpassword]=useState(false);
+
+    const location= useLocation();
+
+    const navigate = useNavigate();
+
+    console.log('location here',location)
+
     const handelLogin = e => {
         e.preventDefault();
         console.log(e.currentTarget)
@@ -19,32 +27,46 @@ const Login = () => {
         const password = form.get('password');
         console.log(email, password);
         signIn(email, password)
-            .then()
+            .then(result=>{
+                console.log(result.user)
+
+                // navigate to login
+                navigate(location?.state ? location.state : "/Home");
+            })
             .catch()
+    }
+    if(loading){
+       return <span className="loading loading-spinner text-primary"></span>;
     }
 
 
    
     const handelGooglelogin=()=>{
         signInWithPopup(auth,provider)
-        .then()
+        .then(result=>{
+            navigate(location?.state ? location.state : "/Home");
+        })
         .catch()
     }
 
     const handelGitHubLogin =()=>{
         signInWithPopup(auth,gitProvider)
-        .then()
+        .then(result=>{
+            navigate(location?.state ? location.state : "/Home");
+        })
         .catch()
     }
     return (
         <div>
+            <Helmet><title>Home Press || Login</title></Helmet>
             
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 mt-7 rounded-xl" style={{ backgroundImage: 'url(https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/office-5-1399x899.jpg)' }}>
+                
                 <div className="hero-content flex-col ">
-                    <div className="text-center">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                    </div>
+                    
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <h1 className="text-4xl text-center text-red-800 mt-1 font-bold">Login now!</h1>
+                    
                         <form onSubmit={handelLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -73,6 +95,9 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             <p>Don't have an account? <Link to={"/Register"} className="btn btn-link">Register</Link></p>
+                            < hr />
+                            <div className="text-center">OR</div>
+                            <hr />
                             <div className="space-x-2">
                                 <button onClick={handelGooglelogin} className="btn btn-secondary "><FaGoogle /> GOOGLE</button>
                                 <button onClick={handelGitHubLogin} className="btn btn-secondary "><FaGithub /> GIT HUB</button>

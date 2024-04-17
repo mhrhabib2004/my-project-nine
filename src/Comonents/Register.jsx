@@ -3,12 +3,13 @@ import Navbar from "./Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provaider/AuthProvaider";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser,updateUserProfile } = useContext(AuthContext);
     const [success,setsuccess]=useState('');
     const [RegistrationError,setRegistrationError]=useState('');
     const [showPassword,setshowpassword]=useState(false);
@@ -41,11 +42,14 @@ const Register = () => {
 
         createUser(email,password)
         .then(result=>{
-            console.log(result.user)
-            alert('Your Registration successfull');
-            return;
-        
-       
+            updateUserProfile(name,photo)
+            .then(()=>{
+                console.log(result.user)
+                alert('Your Registration successfull');
+                return;
+
+            })
+           
             
         })
         .catch(error=>{
@@ -58,15 +62,17 @@ const Register = () => {
         
 
         <div>
+            <Helmet><title>Home Press || Register</title></Helmet>
             
            
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 mt-7 rounded-xl" style={{ backgroundImage: 'url(https://homepress.stylemixthemes.com/main/wp-content/uploads/sites/3/2021/03/property-img-2.jpg)' }}>
             
                 <div className="hero-content flex-col ">
                     <div className="text-center">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
+                        
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <h1 className="text-4xl font-bold text-center text-red-700 mt-1">Register now!</h1>
                         <form onSubmit={handelRegister} className="card-body">
                             <div className="form-control">
                                 <label className="label">

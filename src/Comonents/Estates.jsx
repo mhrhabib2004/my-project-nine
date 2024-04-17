@@ -16,8 +16,8 @@ const Estates = () => {
     return (
         <div>
             <div className="text-center mt-7">
-                <h1 className="text-3xl font-bold">let's see</h1>
-                <p className="text-1xl font-normal">Modern Downtown Apartment: Stylish and contemporary living in the heart of the city.</p>
+                <h1 className="text-3xl font-bold">Estates</h1>
+                <p className="text-1xl font-normal">Divided morning sea day Set earth. Grass without cattle. Spirit heaven. <br /> Also i grass give fowl wherein cattle spirit whales rule cattle. Earth fowl given own you’re, fruit so. Shall was.</p>
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-3">
             {

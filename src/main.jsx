@@ -15,6 +15,8 @@ import Register from './Comonents/Register.jsx';
 import AuthProvaider from './Provaider/AuthProvaider.jsx';
 import ErrorPage from './Comonents/ErrorPage.jsx';
 import PropertyShoing from './Comonents/PropertyShoing.jsx';
+import PrivetRout from './Comonents/PrivetRout.jsx';
+import { Helmet, HelmetProvider} from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -28,12 +30,12 @@ const router = createBrowserRouter([
       },
       {
         path:"/UpdateProfile",
-        element:<UpdateProfile></UpdateProfile>,
+        element:<PrivetRout><UpdateProfile></UpdateProfile></PrivetRout>,
 
       },
       {
         path:"/userprofile",
-        element:<Userprofile></Userprofile>,
+        element:<PrivetRout><Userprofile></Userprofile></PrivetRout>,
 
       },
       {
@@ -54,7 +56,7 @@ const router = createBrowserRouter([
       {
         path:"/propertyShowing/:id",
         loader:()=> fetch('/Data.json'),
-        element: <PropertyShoing></PropertyShoing>
+        element: <PrivetRout><PropertyShoing></PropertyShoing></PrivetRout>,
       }
       
     
@@ -65,8 +67,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <HelmetProvider>
      <AuthProvaider>
+      
      <RouterProvider router={router} />
      </AuthProvaider>
+     </HelmetProvider>
   </React.StrictMode>,
 )
