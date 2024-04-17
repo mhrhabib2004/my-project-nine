@@ -31,7 +31,7 @@ const Login = () => {
                 console.log(result.user)
 
                 // navigate to login
-                navigate(location?.state ? location.state : "/Home");
+                navigate(location?.state ? location.state : "/");
             })
             .catch()
     }
@@ -44,7 +44,7 @@ const Login = () => {
     const handelGooglelogin=()=>{
         signInWithPopup(auth,provider)
         .then(result=>{
-            navigate(location?.state ? location.state : "/Home");
+            navigate(location?.state ? location.state : "/");
         })
         .catch()
     }
@@ -52,7 +52,7 @@ const Login = () => {
     const handelGitHubLogin =()=>{
         signInWithPopup(auth,gitProvider)
         .then(result=>{
-            navigate(location?.state ? location.state : "/Home");
+            navigate(location?.state ? location.state : "/");
         })
         .catch()
     }

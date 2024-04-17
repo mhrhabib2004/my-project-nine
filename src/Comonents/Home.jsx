@@ -6,6 +6,7 @@ import Slider from "./Slider";
 
 
 
+
 const Home = () => {
     
     return (

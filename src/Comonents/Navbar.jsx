@@ -13,7 +13,7 @@ const Navbar = () => {
 
   }
   const navLinks = <>
-    <li><NavLink to={"/Home"}>Home</NavLink></li>
+    <li><NavLink to={"/"}>Home</NavLink></li>
     <li><NavLink to={"/UpdateProfile"}>Update Profile</NavLink></li>
     <li><NavLink to={"/userprofile"}>user profile</NavLink></li>
     <li><NavLink to={"/errorPage"}>Contact us</NavLink></li>

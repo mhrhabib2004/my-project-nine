@@ -19,7 +19,7 @@ const UpdateProfile = () => {
             await updateUserProfile(displayName, photoUrl);
             alert("Update successfull, Check your Profile")
             setIsEditing(false);
-            navigate("/Home")
+            navigate("/")
 
         } catch (error) {
             alert("Updating Faild, Please try Again")
@@ -32,11 +32,12 @@ const UpdateProfile = () => {
     useEffect(() => {
         setDisplayName(updateUserProfile.displayName || '');
         setPhotoURL(updateUserProfile.photoURL || '');
+
     }, [updateUserProfile]);
 
-   
-
+  
     return (
+
         <div>
             <div className="mt-4">
                 <div data-aos="fade-up" data-aos-duration="1500" className="hero min-h-screen" style={{ backgroundImage: 'url(https://images.pexels.com/photos/460695/pexels-photo-460695.jpeg?auto=compress&cs=tinysrgb&w=600)' }}>

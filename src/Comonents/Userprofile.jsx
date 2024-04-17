@@ -22,7 +22,7 @@ const Userprofile = () => {
                 <h2 className="card-title">Name : {user?.displayName}</h2>
                 <p>Email : {user?.email}</p>
                 <div className="card-actions">
-                    <Link to={"/Home"}><button className="btn btn-primary">Back to Home</button></Link>
+                    <Link to={"/"}><button className="btn btn-primary">Back to Home</button></Link>
                 </div>
             </div>
         </div>

@@ -14,6 +14,19 @@ const AuthProvaider = ({children}) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth,email,password);
     }
+    
+    const updateUserProfile = (name, photoURL) => {
+        setLoading(true);
+       return updateProfile(auth.currentUser, {
+           
+           displayName: name,
+           photoURL: photoURL,
+           
+       })
+       
+
+   }
+
     const signIn = (email,password)=>{
         setLoading(true);
         return signInWithEmailAndPassword(auth,email,password);
@@ -25,30 +38,21 @@ const AuthProvaider = ({children}) => {
         setLoading(true);
         return signOut(auth);
     }
+    
     useEffect(()=>{
+        
        const unsubscribe = onAuthStateChanged(auth,crrentUser=>{
             console.log('user in the auth state changed',crrentUser);
             setUser(crrentUser);
             setLoading(false);
+            
         });
         return()=>{
             unsubscribe();
         }
     },[])
 
-    const updateUserProfile = (name, photoURL) => {
-         {setLoading(true)
-
-         }
-        return updateProfile(auth.currentUser, {
-            
-            displayName: name,
-            photoURL: photoURL,
-            
-        })
-        
-
-    }
+   
     
     
     
