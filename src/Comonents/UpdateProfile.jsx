@@ -39,8 +39,8 @@ const UpdateProfile = () => {
     return (
 
         <div>
-            <div className="mt-4">
-                <div data-aos="fade-up" data-aos-duration="1500" className="hero min-h-screen" style={{ backgroundImage: 'url(https://images.pexels.com/photos/460695/pexels-photo-460695.jpeg?auto=compress&cs=tinysrgb&w=600)' }}>
+            <div className="mt-7">
+                <div data-aos="fade-up" data-aos-duration="1500" className="hero min-h-screen bg-no-repeat bg-cover bg-center rounded-xl " style={{ backgroundImage: 'url(https://media.istockphoto.com/id/1317246838/photo/abstract-big-data-representation-in-red-color-with-binary-numbers-and-3d-cube-shapes.webp?b=1&s=170667a&w=0&k=20&c=HuNl9hMBMGSoEYnkLDOURztGLQzWMQLx4TYitrFe704=)' }}>
                     <div className="hero-overlay bg-opacity-30"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div data-aos="zoom-in" data-delay="2000" data-aos-duration="2500" className="max-w-md border  border-yellow-800 rounded-lg backdrop-blur-sm">
@@ -69,7 +69,7 @@ const UpdateProfile = () => {
                                         </div>
 
                                         {/* Submit Button  */}
-                                        <button className="block w-full p-3 text-center rounded-lg dark:text-gray-50 dark:bg-violet-600">{isEditing ? 'Update' : 'Edit'}</button>
+                                        <button className="block btn-outline btn btn-warning w-full p-3 text-center rounded-lg dark:text-gray-50 dark:bg-violet-600">{isEditing ? 'Update' : 'Edit'}</button>
 
                                     </form>
                                     

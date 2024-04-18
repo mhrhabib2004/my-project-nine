@@ -65,7 +65,7 @@ const Register = () => {
             <Helmet><title>Home Press || Register</title></Helmet>
             
            
-            <div className="hero min-h-screen bg-base-200 mt-7 rounded-xl" style={{ backgroundImage: 'url(https://homepress.stylemixthemes.com/main/wp-content/uploads/sites/3/2021/03/property-img-2.jpg)' }}>
+            <div className="hero min-h-screen bg-base-200 mt-7 bg-no-repeat bg-cover bg-center  rounded-xl" style={{ backgroundImage: 'url(https://homepress.stylemixthemes.com/main/wp-content/uploads/sites/3/2021/03/property-img-2.jpg)' }}>
             
                 <div className="hero-content flex-col ">
                     <div className="text-center">

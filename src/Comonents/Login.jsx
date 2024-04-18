@@ -60,7 +60,7 @@ const Login = () => {
         <div>
             <Helmet><title>Home Press || Login</title></Helmet>
             
-            <div className="hero min-h-screen bg-base-200 mt-7 rounded-xl" style={{ backgroundImage: 'url(https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/office-5-1399x899.jpg)' }}>
+            <div className="hero min-h-screen bg-no-repeat bg-cover bg-center  mt-7 rounded-xl" style={{ backgroundImage: 'url(https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/office-5-1399x899.jpg)' }}>
                 
                 <div className="hero-content flex-col ">
                     

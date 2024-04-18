@@ -11,10 +11,10 @@ const Userprofile = () => {
         return <span className="loading loading-spinner text-primary"></span>;
      }
     return (
-    <div data-aos="zoom-in-left" className="h-96 mt-7 rounded-xl" style={{ backgroundImage: 'url(https://images.pexels.com/photos/460695/pexels-photo-460695.jpeg?auto=compress&cs=tinysrgb&w=600)' }}>
+    <div data-aos="zoom-in-left" className="h-96 mt-7 bg-no-repeat bg-cover bg-center  rounded-xl" style={{ backgroundImage: 'url(https://www.veeforu.com/wp-content/uploads/2023/07/youtube-banner-background-futuristic-2048x1152-1-1024x576.jpg)' } }>
         <div className="grid justify-center" >
             <Helmet><title>Home Press || User Profile</title></Helmet>
-            <div data-aos="zoom-in-up"className=" mt-7 card w-96 bg-base-100 shadow-xl">
+            <div data-aos="zoom-in-up"className=" mt-7 card w-auto bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
                 <img src={user?.photoURL} alt="Shoes" className="rounded-xl h-28" />
             </figure>
