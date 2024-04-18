@@ -24,7 +24,7 @@ Currently, two official plugins are available:
 - [firebase](https://console.firebase.google.com/)
 - [moment-js](https://momentjs.com/)
 - [aos-animation](https://michalsnik.github.io/aos/)
-- [react-hook-form]
+- [react-hook-form](https://v5.reactrouter.com/web/api/Hooks/usehistory)
 - [react-tost](https://www.npmjs.com/package/react-toastify)
-- [react-helmet]()
+- [react-helmet](https://www.npmjs.com/package/react-helmet-async)
 - [animate.css](https://animate.style/)
