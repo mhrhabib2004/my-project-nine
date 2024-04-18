@@ -17,6 +17,7 @@ import ErrorPage from './Comonents/ErrorPage.jsx';
 import PropertyShoing from './Comonents/PropertyShoing.jsx';
 import PrivetRout from './Comonents/PrivetRout.jsx';
 import { Helmet, HelmetProvider} from 'react-helmet-async';
+import Team from './Comonents/Team.jsx';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
       {
         path:"/errorPage",
         element:<ErrorPage></ErrorPage>,
+
+      },
+      {
+        path:"/Team",
+        element:<Team></Team>,
 
       },
       {

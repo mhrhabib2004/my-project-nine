@@ -1,7 +1,7 @@
 
 const ChooseUs = () => {
     return (
-        <div className="mt-7">
+        <div style={{ backgroundImage: 'url(https://t4.ftcdn.net/jpg/05/18/77/63/360_F_518776302_XZQkgR5kuSZyuchfvOT2jT0dhvj3E7BB.jpg)' }}  data-aos="fade-down-right" className="mt-7 ">
             <div>
                 <h1 className="text-4xl font-bold text-center" >Why Choose Us</h1>
 

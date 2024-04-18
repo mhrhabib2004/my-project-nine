@@ -5,12 +5,14 @@ import { FaFacebook, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="mt-7 ">
-      <footer className="px-4 divide-y rounded-xl bg-[#a69a9a] text-[#fff]">
+      <footer  data-aos="fade-up" className="px-4 divide-y rounded-xl bg-[#a69a9a] text-[#fff]">
         <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3">
             <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
               <span className="self-center text-2xl font-semibold">
-                <button className="btn text-4xl btn-outline h-auto border-none bg-slate-600 p-2 btn-secondary">DREM HOME</button></span>
+                <button  data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="btn text-4xl btn-outline h-auto border-none bg-slate-600 p-2 btn-secondary">DREM HOME</button></span>
             </a>
           </div>
           <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -73,8 +75,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="py-6 text-sm text-center text-yellow-700 font-medium ">© 2000 Company Co. All rights reserved.</div>
-      </footer>
-    </div>
+      </footer >
+    </div >
 
   );
 };
