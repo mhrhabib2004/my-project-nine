@@ -60,12 +60,14 @@ const Login = () => {
         <div>
             <Helmet><title>Home Press || Login</title></Helmet>
             
-            <div className="hero min-h-screen bg-no-repeat bg-cover bg-center  mt-7 rounded-xl" style={{ backgroundImage: 'url(https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/office-5-1399x899.jpg)' }}>
+            <div className="hero min-h-screen bg-no-repeat bg-cover bg-center  mt-7 rounded-xl" style={{ backgroundImage: 'url(https://t4.ftcdn.net/jpg/05/71/83/47/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg)' }}>
                 
                 <div className="hero-content flex-col ">
                     
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h1 className="text-4xl text-center text-red-800 mt-1 font-bold">Login now!</h1>
+                    <br />
+                    <hr />
                     
                         <form onSubmit={handelLogin} className="card-body">
                             <div className="form-control">

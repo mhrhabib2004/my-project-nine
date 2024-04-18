@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import auth from "../firebase.config";
 import { AuthContext } from "../Provaider/AuthProvaider";
 import { Helmet } from "react-helmet-async";
 
@@ -10,6 +9,8 @@ const Userprofile = () => {
     if(loading){
         return <span className="loading loading-spinner text-primary"></span>;
      }
+     
+    
     return (
     <div data-aos="zoom-in-left" className="h-96 mt-7 bg-no-repeat bg-cover bg-center  rounded-xl" style={{ backgroundImage: 'url(https://www.veeforu.com/wp-content/uploads/2023/07/youtube-banner-background-futuristic-2048x1152-1-1024x576.jpg)' } }>
         <div className="grid justify-center" >

@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link,useLocation,useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provaider/AuthProvaider";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import { RiUserLocationFill } from "react-icons/ri";
 
 
 
@@ -13,6 +14,10 @@ const Register = () => {
     const [success,setsuccess]=useState('');
     const [RegistrationError,setRegistrationError]=useState('');
     const [showPassword,setshowpassword]=useState(false);
+
+    const location= useLocation();
+
+    const navigate = useNavigate();
 
     const handelRegister = e => {
         e.preventDefault();
@@ -42,6 +47,7 @@ const Register = () => {
 
         createUser(email,password)
         .then(result=>{
+            navigate(location?.state ? location.state : "/");
             updateUserProfile(name,photo)
             .then(()=>{
                 console.log(result.user)
@@ -65,14 +71,17 @@ const Register = () => {
             <Helmet><title>Home Press || Register</title></Helmet>
             
            
-            <div className="hero min-h-screen bg-base-200 mt-7 bg-no-repeat bg-cover bg-center  rounded-xl" style={{ backgroundImage: 'url(https://homepress.stylemixthemes.com/main/wp-content/uploads/sites/3/2021/03/property-img-2.jpg)' }}>
+            <div className="hero min-h-screen bg-base-200 mt-7 bg-no-repeat bg-cover bg-center  rounded-xl" style={{ backgroundImage: 'url(https://cdn.photoroom.com/v1/assets-cached.jpg?path=backgrounds_v3/black/Photoroom_black_background_extremely_fine_texture_only_black_co_c3ee01bd-a082-44ff-b184-e338a13b2ffa.jpg)' }}>
             
                 <div className="hero-content flex-col ">
                     <div className="text-center">
                         
                     </div>
+                    
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <h1 className="text-4xl font-bold text-center text-red-700 mt-1">Register now!</h1>
+                    <br />
+                    <hr />
                         <form onSubmit={handelRegister} className="card-body">
                             <div className="form-control">
                                 <label className="label">

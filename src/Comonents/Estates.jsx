@@ -32,11 +32,6 @@ const Estates = () => {
 
             </div>
 
-
-
-
-
-
         </div>
     );
 };

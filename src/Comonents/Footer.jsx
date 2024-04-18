@@ -15,7 +15,7 @@ const Footer = () => {
      data-aos-duration="2000" className="btn text-4xl btn-outline h-auto border-none bg-slate-600 p-2 btn-secondary">DREM HOME</button></span>
             </a>
           </div>
-          <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+          <div className="grid animate__animated animate__fadeInDown grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div className="space-y-3">
               <h3 className="tracking-wide uppercase text-yellow-700 font-medium text-lg">Product</h3>
               <ul className="space-y-1">
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-6 text-sm text-center text-yellow-700 font-medium ">© 2000 Company Co. All rights reserved.</div>
+        <div className="py-6 text-sm text-center animate__animated animate__bounce text-yellow-700 font-medium ">© 2000 Company Co. All rights reserved.</div>
       </footer >
     </div >
 
