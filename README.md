@@ -4,7 +4,7 @@ Five Notable and bullet points about the website :
 
 - User friendly interface and easy to navigate
 - For details click the view property button, it's also helpful
-- Your choice home aslo added here in favorite section
+- Your choice home aslo added here in also team,contact us, and two conditional rout
 - log in and regiter page give the privacy
 - Browsing experience across all platforms
 
